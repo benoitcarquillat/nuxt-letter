@@ -1,4 +1,32 @@
-body {
-  background: rgb(12, 10, 36);
-  color: white;
+& {
+  background: $body-bg;
+  color: rgb(155, 155, 155);
 }
+
+.screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  //  opacity: 0;
+  -webkit-animation: appear .5s ease-in-out forwards;
+  -o-animation: appear .5s ease-in-out forwards;
+  -moz-animation: appear .5s ease-in-out forwards;
+  animation: appear .5s ease-in-out forwards;
+
+  object {
+    width: 25%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
